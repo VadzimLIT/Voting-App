@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.mad1.myapplication.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.mad1.myapplication.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/SecondFragment_to_candidateListFragment"
+            app:destination="@id/candidateListFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_voterListFragment"
+            app:destination="@id/voterListFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_adminListFragment"
+            app:destination="@id/adminListFragment" />
+        <action
+            android:id="@+id/SecondFragment_to_sendResultToVotersFragment"
+            app:destination="@id/sendResultToVotersFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_candidateAddFragment"
+            app:destination="@id/candidateAddFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_sendVotingStartSmsToVotersFragment"
+            app:destination="@id/sendVotingStartSmsToVotersFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_deleteVotingDataFragment"
+            app:destination="@id/deleteVotingDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.mad1.myapplication.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/candidateListFragment"
+        android:name="com.mad1.myapplication.views_candidate.CandidateListFragment"
+        android:label="fragment_candidate_list"
+        tools:layout="@layout/fragment_candidate_profile_1" >
+        <argument
+            android:name="candidate_id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_candidateListFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/candidateAddFragment"
+        android:name="com.mad1.myapplication.views_candidate.CandidateAddFragment"
+        android:label="fragment_candidate_add"
+        tools:layout="@layout/fragment_candidate_add" >
+        <action
+            android:id="@+id/action_candidateAddFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/voterListFragment"
+        android:name="com.mad1.myapplication.voter_views.VoterMenuFragment"
+        android:label="fragment_voter_list"
+        tools:layout="@layout/fragment_voter_menu" >
+        <action
+            android:id="@+id/action_voterListFragment_to_voterAddFragment"
+            app:destination="@id/voterAddFragment" />
+        <action
+            android:id="@+id/action_voterListFragment_to_voterListFragment2"
+            app:destination="@id/voterListFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/voterAddFragment"
+        android:name="com.mad1.myapplication.voter_views.VoterAddFragment"
+        android:label="fragment_voter_add"
+        tools:layout="@layout/fragment_voter_add" >
+        <action
+            android:id="@+id/action_voterAddFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_voterAddFragment_to_voterListFragment2"
+            app:destination="@id/voterListFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminListFragment"
+        android:name="com.mad1.myapplication.views.admin_views.AdminListFragment"
+        android:label="fragment_admin_list"
+        tools:layout="@layout/fragment_admin_list" >
+        <action
+            android:id="@+id/action_adminListFragment_to_adminAddFragment"
+            app:destination="@id/adminAddFragment" />
+        <action
+            android:id="@+id/action_adminListFragment_to_adminProfileFragment"
+            app:destination="@id/adminProfileFragment" />
+        <action
+            android:id="@+id/action_adminListFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminAddFragment"
+        android:name="com.mad1.myapplication.views.admin_views.AdminAddFragment"
+        android:label="fragment_admin_add"
+        tools:layout="@layout/fragment_admin_add" >
+        <action
+            android:id="@+id/AdminAddFragment_to_AdminListFragment"
+            app:destination="@id/adminListFragment" />
+        <action
+            android:id="@+id/AdminAddFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendResultToVotersFragment"
+        android:name="com.mad1.myapplication.SendResultToVotersFragment"
+        android:label="fragment_send_result_to_voters"
+        tools:layout="@layout/fragment_send_result_to_voters" />
+    <fragment
+        android:id="@+id/voterListFragment2"
+        android:name="com.mad1.myapplication.voter_views.VoterListFragment"
+        android:label="fragment_voter_list"
+        tools:layout="@layout/fragment_voter_list" >
+        <action
+            android:id="@+id/action_voterListFragment2_to_voterProfileFragment"
+            app:destination="@id/voterProfileFragment" />
+        <action
+            android:id="@+id/action_voterListFragment2_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/voterProfileFragment"
+        android:name="com.mad1.myapplication.voter_views.VoterProfileFragment"
+        android:label="fragment_voter_profile"
+        tools:layout="@layout/fragment_voter_profile" >
+        <argument
+            android:name="voter_phone"
+            app:argType="string"
+            android:defaultValue="no_phone" />
+        <action
+            android:id="@+id/action_voterProfileFragment_to_voterListFragment2"
+            app:destination="@id/voterListFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminProfileFragment"
+        android:name="com.mad1.myapplication.views.admin_views.AdminProfileFragment"
+        android:label="fragment_admin_profile"
+        tools:layout="@layout/fragment_admin_profile" >
+        <argument
+            android:name="admin_id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_adminProfileFragment_to_adminListFragment"
+            app:destination="@id/adminListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendVotingStartSmsToVotersFragment"
+        android:name="com.mad1.myapplication.SendVotingStartSmsToVotersFragment"
+        android:label="SendVotingStartSmsToVotersFragment" >
+        <action
+            android:id="@+id/action_sendVotingStartSmsToVotersFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.mad1.myapplication.ResetPasswordFragment"
+        android:label="ResetPasswordFragment" >
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_resetPasswordSecondStepFragment"
+            app:destination="@id/resetPasswordSecondStepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordSecondStepFragment"
+        android:name="com.mad1.myapplication.ResetPasswordSecondStepFragment"
+        android:label="ResetPasswordSecondStepFragment" >
+        <argument
+            android:name="admin_id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_resetPasswordSecondStepFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deleteVotingDataFragment"
+        android:name="com.mad1.myapplication.DeleteVotingDataFragment"
+        android:label="DeleteVotingDataFragment" >
+        <action
+            android:id="@+id/action_deleteVotingDataFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/voterListFragmentContainer"
+        tools:context=".voter_views.VoterListFragment">
+
+        <Button
+            android:id="@+id/voter_list_back_to_candidates_list_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voter_list_recycle_view"
+            android:text="Back To Candidates" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/voter_list_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000"/>
+
+    </RelativeLayout>
+</ScrollView>
+

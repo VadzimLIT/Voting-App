@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="3dp"
+        tools:context=".SignUpFragment">
+
+        <EditText
+            android:id="@+id/admin_signup_login_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Login Name"
+            android:layout_marginTop="30dp"
+            android:importantForAutofill="no"
+            android:inputType="textCapSentences|textAutoCorrect"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"/>
+
+        <EditText
+            android:id="@+id/admin_signup_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login"
+            android:layout_marginTop="30dp"
+            android:importantForAutofill="no"
+            android:inputType="textCapSentences|textAutoCorrect"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"/>
+
+        <EditText
+            android:id="@+id/admin_signup_second_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/sign_up_second_name"
+            android:layout_marginTop="30dp"
+            android:importantForAutofill="no"
+            android:inputType="textCapSentences|textAutoCorrect"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"/>
+
+        <EditText
+            android:id="@+id/admin_signup_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:layout_marginTop="40dp"
+            android:inputType="textCapSentences|textAutoCorrect"
+            android:importantForAutofill="no"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"/>
+
+        <EditText
+            android:id="@+id/admin_confirm_signup_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/sign_up_confirm_password"
+            android:layout_marginTop="40dp"
+            android:inputType="textCapSentences|textAutoCorrect"
+            android:importantForAutofill="no"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"/>
+
+        <EditText
+            android:id="@+id/admin_mobile_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter phone number"
+            android:layout_marginTop="40dp"
+            android:inputType="phone"
+            android:importantForAutofill="no"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"/>
+
+        <EditText
+            android:id="@+id/admin_mother_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter mother's maiden name"
+            android:layout_marginTop="40dp"
+            android:inputType="textCapSentences|textAutoCorrect"
+            android:importantForAutofill="no"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"/>
+
+        <EditText
+            android:id="@+id/admin_favourite_place_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter favourite place"
+            android:layout_marginTop="40dp"
+            android:inputType="textCapSentences|textAutoCorrect"
+            android:importantForAutofill="no"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"/>
+
+        <Button
+            android:id="@+id/button_signup_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="320dp"/>
+    </LinearLayout>
+</ScrollView>
+

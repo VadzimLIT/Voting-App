@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    tools:context=".SendVotingStartSmsToVotersFragment">
+
+    <TextView
+        android:id="@+id/hint_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="50dp"
+        android:text="By Clicking The Button Below SMS With Voting Contet Sent To Voters" />
+
+    <Button
+        android:id="@+id/start_vote_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Start Vote SMS"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/hint_tv"/>
+
+    <Button
+        android:id="@+id/send_start_vote_home_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back Home"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/start_vote_bt"/>
+</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,42 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mad1.myapplication.MainActivity">
+    <item
+        android:id="@+id/voter_functionality"
+        android:orderInCategory="100"
+        android:title="Manage Voters"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/candidate_functionality"
+        android:orderInCategory="100"
+        android:title="Manage Candidates"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/admin_functionality"
+        android:orderInCategory="100"
+        android:title="Manage Admins"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/start_voting"
+        android:orderInCategory="100"
+        android:title="Send Start Vote SMS"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/support"
+        android:orderInCategory="100"
+        android:title="Contact Support"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/delete_all_voting_data_menu"
+        android:orderInCategory="100"
+        android:title="Delete Voting Data"
+        app:showAsAction="never"/>
+
+</menu>
